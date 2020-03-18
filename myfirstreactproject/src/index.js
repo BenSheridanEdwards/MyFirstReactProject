@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 
 // Create a React component
 const App = () => {
+  function getTime() {
+    return (new Date()).toLocaleTimeString()
+  }
+
+
   const buttonText = { text: 'Click me' };
   const labelText = 'Enter name:';
   return (
@@ -15,6 +20,7 @@ const App = () => {
       <button style={{ backgroundColor: 'blue', color: 'white'}}>
         {buttonText.text}
       </button>
+      <p>The time is: {getTime()}</p>
     </div>
   );
 };
